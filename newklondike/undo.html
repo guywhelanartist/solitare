@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>iPhone_KLONDIKE</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<!--Fireworks MX 2004 Dreamweaver MX 2004 target.  Created Thu Aug 11 22:19:58 GMT-0500 ( ) 2005-->
+<link href="iKlondike.css" rel="stylesheet" type="text/css">
+<script src="ud.js" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+
+var loadCount = 0;
+var maxLoad = 0;
+var beamLeft = 13;
+var beamRight = 284;
+var beamTravel = beamRight - beamLeft;
+var beamPos = 13;
+
+
+function MM_preloadImages() 
+{ //v3.0
+
+	var d=document; 
+	if(d.images)
+	{ 
+		if(!d.MM_p) 
+		{
+			d.MM_p=new Array();
+		}
+		var i,j=d.MM_p.length,a=MM_preloadImages.arguments; 
+		maxLoad = a.length;
+		//alert("maxLoad: " + maxLoad);
+		for(i=0; i<a.length; i++)
+		{
+			if (a[i].indexOf("#")!=0)
+			{ 
+				d.MM_p[j]=new Image;
+				d.MM_p[j].onload = function() {
+					//document.form1.tferout.value = beamPos;
+					beamPos = (beamTravel*loadCount/maxLoad) + beamLeft;
+					document.images.beam.style.left = beamPos;
+					if (++loadCount == maxLoad) {
+					//	alert("I think we're done");
+						
+					document.images.beam.style.left = -200;
+						
+					document.images.loading.style.left = -400;
+					document.images.loadbkg.style.left = -400;
+					placeCards()
+					}
+				};
+				d.MM_p[j++].src=a[i];
+			}
+		}
+	}
+}
+
+//-->
+</script>
+</head>
+<body  onload="MM_preloadImages('images/picked.gif', 'images/loading.jpg', 'images/beam.jpg', 'images/Full/AH.gif', 'images/Full/2H.gif', 'images/Full/3H.gif', 'images/Full/4H.gif', 'images/Full/5H.gif', 'images/Full/6H.gif', 'images/Full/7H.gif', 'images/Full/8H.gif', 'images/Full/9H.gif', 'images/Full/10H.gif', 'images/Full/JH.gif', 'images/Full/QH.gif', 'images/Full/KH.gif', 'images/Full/AD.gif', 'images/Full/2D.gif', 'images/Full/3D.gif', 'images/Full/4D.gif', 'images/Full/5D.gif', 'images/Full/6D.gif', 'images/Full/7D.gif', 'images/Full/8D.gif', 'images/Full/9D.gif', 'images/Full/10D.gif', 'images/Full/JD.gif', 'images/Full/QD.gif', 'images/Full/KD.gif', 'images/Full/AC.gif', 'images/Full/2C.gif', 'images/Full/3C.gif', 'images/Full/4C.gif', 'images/Full/5C.gif', 'images/Full/6C.gif', 'images/Full/7C.gif', 'images/Full/8C.gif', 'images/Full/9C.gif', 'images/Full/10C.gif', 'images/Full/JC.gif', 'images/Full/QC.gif', 'images/Full/KC.gif', 'images/Full/AS.gif', 'images/Full/2S.gif', 'images/Full/3S.gif', 'images/Full/4S.gif', 'images/Full/5S.gif', 'images/Full/6S.gif', 'images/Full/7S.gif', 'images/Full/8S.gif', 'images/Full/9S.gif', 'images/Full/10S.gif', 'images/Full/JS.gif', 'images/Full/QS.gif', 'images/Full/KS.gif', 'images/Full/back.gif', 'images/Full/deal.gif');">
+
+<!--<div class="loading"></div>
+<div class="beam"></div>-->
+<div style="z-index:-2; position:absolute; top:250; left:0; ">
+<form name="form1">
+<input type="hidden" name="tferin1" ><br>
+<input type="hidden" name="tferin2" ><br>
+<!--
+shuffleDeck<br>
+<textarea name="shuffleDeck" cols="50" rows="5"></textarea><br>
+dealStack<br>
+<textarea name="dealStack" cols="50" rows="5"></textarea><br>
+aceStack<br>
+<textarea name="aceStack" cols="50" rows="5"></textarea><br>
+acevisibility<br>
+<textarea name="acevisibility" cols="50" rows="5"></textarea><br>
+colvisibility<br>
+<textarea name="colvisibility" cols="50" rows="5"></textarea>
+<input  type="text"name="tferout">
+-->
+</form>
+</div>
+</body>
+</html>

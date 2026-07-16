@@ -1,0 +1,26 @@
+body {
+	background-color: #339933;
+	margin: 0px;
+	height: 100px;
+	width: 320px;
+}
+.loading {
+	background-image: url(images/loading.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 100px;
+	width: 320px;
+	left: 0px;
+	top: 100px;
+	position: fixed;
+}
+.beam {
+	background-image: url(images/beam.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 20px;
+	width: 20px;
+	left: 13px;
+	top: 159px;
+	position: fixed;
+}
